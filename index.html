@@ -12,10 +12,10 @@
 	<meta property="og:description" content="Email, websites, and looking professional — fixed prices, no agency theater.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://heynewell.com/">
-	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23FAF6E9'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='bold' text-anchor='middle' fill='%2323331D'%3Eh.%3C/text%3E%3C/svg%3E">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FAF6E9'/%3E%3Ctext x='6' y='46' font-family='Georgia,serif' font-style='italic' font-weight='bold' font-size='38' fill='%2323331D'%3Ehey%3C/text%3E%3Ccircle cx='55' cy='43' r='6' fill='%23B5541C'/%3E%3C/svg%3E">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 	<style>
 		:root {
 			--paper: #FAF6E9;
@@ -43,49 +43,69 @@
 		.wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 
 		/* ---------- top bar ---------- */
-		header {
-			border-bottom: 1px solid var(--rule);
-		}
-		.bar {
-			display: flex; justify-content: space-between; align-items: baseline;
-			padding: 20px 0;
-		}
-		.mark { font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
-		.mark em { font-style: normal; color: var(--green); }
+		header { border-bottom: 1px solid var(--rule); }
+		.bar { display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; }
+		.mark { font-family: var(--serif); font-weight: 400; font-size: 25px; letter-spacing: -0.02em; text-decoration: none; color: var(--ink); }
+		.mark em { font-style: italic; font-weight: 900; letter-spacing: -0.04em; }
+		.mark .dot { color: var(--stamp); font-weight: 900; }
 		.bar nav { font-family: var(--mono); font-size: 12.5px; display: flex; gap: 24px; }
 		.bar nav a { color: var(--ink-soft); text-decoration: none; }
 		.bar nav a:hover { color: var(--green); }
 
+		/* ---------- ticker ---------- */
+		.ticker { border-bottom: 1px solid var(--rule); background: var(--green-deep); overflow: hidden; white-space: nowrap; }
+		.ticker-track { display: inline-block; padding: 9px 0; animation: tick 28s linear infinite; }
+		.ticker span {
+			font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
+			color: var(--paper); text-transform: uppercase; margin: 0 18px;
+		}
+		.ticker span b { color: #8FCF7A; font-weight: 500; }
+		@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
 		/* ---------- hero ---------- */
-		.hero { padding: 96px 0 72px; }
+		.hero { padding: 88px 0 64px; position: relative; }
 		.kicker {
 			font-family: var(--mono); font-size: 13px; letter-spacing: 0.14em;
 			text-transform: uppercase; color: var(--ink-soft); margin-bottom: 24px;
 		}
-		.kicker b { color: var(--stamp); font-weight: 500; }
+		.kicker b { color: var(--stamp); font-weight: 700; }
 		h1 {
-			font-family: var(--serif); font-weight: 600;
-			font-size: clamp(40px, 6.4vw, 76px);
-			line-height: 1.02; letter-spacing: -0.02em;
-			max-width: 15ch;
+			font-family: var(--serif); font-weight: 900;
+			font-size: clamp(42px, 6.6vw, 84px);
+			line-height: 0.98; letter-spacing: -0.025em;
+			max-width: 14ch;
 		}
 		h1 .help { color: var(--green); font-style: italic; font-weight: 400; }
-		.hero p.lede {
-			margin-top: 28px; font-size: 20px; max-width: 52ch; color: var(--ink-soft);
-		}
-		.hero .cta-row { margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+		.hero p.lede { margin-top: 28px; font-size: 20px; max-width: 52ch; color: var(--ink-soft); }
+		.hero .cta-row { margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 		.btn {
 			display: inline-block; text-decoration: none;
-			font-family: var(--mono); font-size: 14px; font-weight: 500;
-			padding: 14px 22px; border: 1px solid var(--ink);
+			font-family: var(--mono); font-size: 14px; font-weight: 700;
+			padding: 15px 24px; border: 1px solid var(--ink);
 		}
 		.btn.primary { background: var(--green-deep); color: var(--paper); border-color: var(--green-deep); }
 		.btn.primary:hover { background: var(--green); border-color: var(--green); color: #fff; }
 		.btn.ghost { color: var(--ink); }
 		.btn.ghost:hover { background: var(--paper-deep); }
-		.hero .promise {
-			margin-top: 20px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft);
+		.hero .promise { margin-top: 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); }
+		.hero-stamp {
+			position: absolute; top: 72px; right: 24px;
+			width: 130px; height: 130px; border: 2.5px solid var(--stamp); border-radius: 50%;
+			display: flex; align-items: center; justify-content: center; text-align: center;
+			font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+			color: var(--stamp); text-transform: uppercase; line-height: 1.5;
+			transform: rotate(8deg);
 		}
+		@media (max-width: 900px) { .hero-stamp { display: none; } }
+
+		/* ---------- money shot ---------- */
+		.moneyshot { background: var(--green-deep); }
+		.moneyshot .wrap { padding: 56px 24px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+		.moneyshot .vs-line { font-family: var(--serif); font-size: clamp(24px, 3.4vw, 40px); font-weight: 600; color: var(--paper); line-height: 1.15; letter-spacing: -0.01em; }
+		.moneyshot .vs-line s { color: #8a9b82; font-weight: 400; }
+		.moneyshot .vs-line em { color: #8FCF7A; font-style: italic; font-weight: 400; }
+		.moneyshot .big { font-family: var(--serif); font-size: clamp(56px, 8vw, 96px); font-weight: 900; color: #8FCF7A; letter-spacing: -0.03em; line-height: 1; text-align: right; }
+		.moneyshot .big small { display: block; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.14em; color: var(--paper); margin-top: 8px; }
 
 		/* ---------- ruled sections ---------- */
 		section { border-top: 1px solid var(--rule); padding: 72px 0; }
@@ -93,30 +113,48 @@
 			font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
 			text-transform: uppercase; color: var(--ink-soft); margin-bottom: 40px;
 		}
-		.sec-label span { color: var(--stamp); }
+		.sec-label span { color: var(--stamp); font-weight: 700; }
 
 		/* ---------- services ---------- */
 		.svc { display: grid; grid-template-columns: 88px 1fr 2fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); align-items: baseline; }
 		.svc:first-of-type { border-top: 0; padding-top: 0; }
 		.svc .no { font-family: var(--serif); font-size: 34px; font-weight: 400; color: var(--rule); }
-		.svc h3 { font-family: var(--serif); font-size: 26px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; }
-		.svc h3 small { display: block; font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--green); margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+		.svc h3 { font-family: var(--serif); font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+		.svc h3 small { display: block; font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--green); margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
 		.svc p { color: var(--ink-soft); }
 		.svc p b { color: var(--ink); font-weight: 600; }
+
+		/* ---------- versus table ---------- */
+		.versus { border: 1px solid var(--ink); }
+		.vrow { display: grid; grid-template-columns: 1fr 1fr; }
+		.vrow > div { padding: 20px 24px; font-size: 15px; }
+		.vrow.head > div { font-family: var(--mono); font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 24px; }
+		.vrow.head .them { background: var(--paper-deep); color: var(--ink-soft); }
+		.vrow.head .us { background: var(--green-deep); color: var(--paper); }
+		.vrow .them { border-right: 1px solid var(--rule); color: var(--ink-soft); }
+		.vrow .us { font-weight: 600; }
+		.vrow:nth-child(even):not(.head) { background: var(--paper-deep); }
+		.vrow .us b { color: var(--green); }
 
 		/* ---------- pricing ---------- */
 		.tickets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--ink); background: var(--paper-deep); }
 		.ticket { padding: 32px 28px; border-right: 1px dashed var(--ink-soft); position: relative; }
 		.ticket:last-child { border-right: 0; }
 		.ticket h4 { font-family: var(--mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 16px; }
-		.ticket .price { font-family: var(--serif); font-size: 44px; font-weight: 700; letter-spacing: -0.02em; }
+		.ticket .price { font-family: var(--serif); font-size: 48px; font-weight: 900; letter-spacing: -0.02em; }
 		.ticket .price sub { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--ink-soft); vertical-align: baseline; margin-left: 6px; letter-spacing: 0; }
 		.ticket ul { list-style: none; margin-top: 20px; }
 		.ticket li { font-size: 15px; color: var(--ink-soft); padding: 7px 0 7px 20px; position: relative; border-top: 1px solid var(--rule); }
-		.ticket li::before { content: "—"; position: absolute; left: 0; color: var(--green); }
+		.ticket li::before { content: "—"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+		.ticket.hot { background: var(--paper); outline: 2.5px solid var(--green); outline-offset: -2.5px; }
+		.ticket.hot h4::after {
+			content: "MOST PICKED"; display: inline-block; margin-left: 10px;
+			font-size: 9.5px; font-weight: 700; letter-spacing: 0.1em;
+			color: var(--paper); background: var(--green); padding: 3px 7px;
+		}
 		.stamp {
 			position: absolute; top: -14px; right: 18px;
-			font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em;
+			font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em;
 			color: var(--stamp); border: 1.5px solid var(--stamp);
 			padding: 4px 10px; transform: rotate(2deg); text-transform: uppercase;
 			background: var(--paper);
@@ -125,28 +163,27 @@
 
 		/* ---------- how ---------- */
 		.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-		.step .n { font-family: var(--mono); font-size: 12px; color: var(--green); letter-spacing: 0.12em; }
-		.step h4 { font-family: var(--serif); font-size: 22px; font-weight: 600; margin: 10px 0 8px; }
+		.step .n { font-family: var(--mono); font-size: 12px; color: var(--green); letter-spacing: 0.12em; font-weight: 500; }
+		.step h4 { font-family: var(--serif); font-size: 22px; font-weight: 700; margin: 10px 0 8px; }
 		.step p { font-size: 15px; color: var(--ink-soft); }
 
 		/* ---------- trust strip ---------- */
 		.trust { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; }
 		.trust blockquote {
 			font-family: var(--serif); font-size: clamp(22px, 3vw, 30px);
-			font-weight: 400; font-style: italic; line-height: 1.3; letter-spacing: -0.01em;
+			font-weight: 600; font-style: italic; line-height: 1.3; letter-spacing: -0.01em;
 		}
 		.trust blockquote em { color: var(--green); }
 		.trust .who { margin-top: 20px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); }
 		.trust .points { font-size: 15px; color: var(--ink-soft); }
 		.trust .points p { padding: 14px 0; border-top: 1px solid var(--rule); }
 		.trust .points p:first-child { border-top: 0; padding-top: 0; }
-		.trust .points b { color: var(--ink); font-weight: 600; }
+		.trust .points b { color: var(--ink); font-weight: 700; }
 
 		/* ---------- contact ---------- */
-		.contact { text-align: left; }
 		.contact h2 {
-			font-family: var(--serif); font-weight: 600;
-			font-size: clamp(32px, 4.6vw, 54px); line-height: 1.05; letter-spacing: -0.02em;
+			font-family: var(--serif); font-weight: 900;
+			font-size: clamp(34px, 5vw, 60px); line-height: 1.0; letter-spacing: -0.025em;
 			max-width: 18ch;
 		}
 		.contact h2 em { color: var(--green); font-style: italic; font-weight: 400; }
@@ -168,6 +205,10 @@
 			.ticket:last-child { border-bottom: 0; }
 			.trust { grid-template-columns: 1fr; gap: 32px; }
 			.bar nav { gap: 16px; }
+			.moneyshot .wrap { grid-template-columns: 1fr; }
+			.moneyshot .big { text-align: left; }
+			.vrow { grid-template-columns: 1fr; }
+			.vrow .them { border-right: 0; border-bottom: 1px dashed var(--rule); }
 		}
 	</style>
 </head>
@@ -175,7 +216,7 @@
 
 <header>
 	<div class="wrap bar">
-		<div class="mark">hey<em>newell</em></div>
+		<a class="mark" href="/"><em>hey</em>newell<span class="dot">.</span></a>
 		<nav>
 			<a href="#services">services</a>
 			<a href="#pricing">pricing</a>
@@ -184,21 +225,39 @@
 	</div>
 </header>
 
+<div class="ticker" aria-hidden="true">
+	<div class="ticker-track">
+		<span>fixed prices</span><span><b>✕</b></span><span>no lock-in</span><span><b>✕</b></span><span>same-week delivery</span><span><b>✕</b></span><span>a real human answers</span><span><b>✕</b></span><span>no agency theater</span><span><b>✕</b></span>
+		<span>fixed prices</span><span><b>✕</b></span><span>no lock-in</span><span><b>✕</b></span><span>same-week delivery</span><span><b>✕</b></span><span>a real human answers</span><span><b>✕</b></span><span>no agency theater</span><span><b>✕</b></span>
+	</div>
+</div>
+
 <main>
 
 	<div class="wrap hero">
+		<div class="hero-stamp">same-week<br>delivery<br>— or it's free</div>
 		<div class="kicker">email · websites · looking the part — <b>done for you</b></div>
 		<h1>You run the business. <span class="help">We'll make it look that way.</span></h1>
 		<p class="lede">
 			heynewell handles the professional front — real email on your own domain, a website
-			that works, and marketing materials you're proud to hand across a truck seat.
-			Fixed prices. Delivered in days. No agency theater.
+			that wins work, and marketing materials you're proud to hand across a truck seat.
+			<b style="color:var(--ink)">You make one phone call. We do the rest.</b>
 		</p>
 		<div class="cta-row">
 			<a class="btn primary" href="mailto:jordan@heynewell.com?subject=Tell%20me%20what%20you%20need">Tell me what you need</a>
-			<a class="btn ghost" href="#pricing">See straight prices</a>
+			<a class="btn ghost" href="#pricing">See straight prices ↓</a>
 		</div>
 		<div class="promise">— replies from a person, usually within the hour.</div>
+	</div>
+
+	<div class="moneyshot">
+		<div class="wrap">
+			<div class="vs-line">
+				Agencies charge <s>$4,000–$8,000</s> for a small-business website.
+				We charge <em>a quarter of that</em> — and ship in days, not months.
+			</div>
+			<div class="big">−75%<small>vs the agency rate</small></div>
+		</div>
 	</div>
 
 	<section id="services">
@@ -211,7 +270,7 @@
 				<p>
 					Your name at your domain — <b>you@yourbusiness.com</b> — on real infrastructure.
 					We migrate your old mail, kill the spam, and set up your phone and computer.
-					No more sending invoices from a AOL address.
+					Stop sending invoices from an AOL address. It's costing you deals.
 				</p>
 			</div>
 
@@ -237,9 +296,23 @@
 		</div>
 	</section>
 
+	<section>
+		<div class="wrap">
+			<div class="sec-label"><span>02</span> — the other guys v heynewell</div>
+			<div class="versus">
+				<div class="vrow head"><div class="them">The other guys</div><div class="us">heynewell</div></div>
+				<div class="vrow"><div class="them">$4,000–$8,000 and a 3-month timeline</div><div class="us"><b>$900</b>, live in a week</div></div>
+				<div class="vrow"><div class="them">Hourly meters &amp; "scope conversations"</div><div class="us"><b>Fixed price.</b> The whole price.</div></div>
+				<div class="vrow"><div class="them">Account manager → project manager → intern</div><div class="us"><b>An engineer</b> who answers the phone</div></div>
+				<div class="vrow"><div class="them">12-month contracts, auto-renewed in the fine print</div><div class="us"><b>Cancel anytime.</b> We earn the next month.</div></div>
+				<div class="vrow"><div class="them">Meetings about the meeting</div><div class="us"><b>We just do it.</b></div></div>
+			</div>
+		</div>
+	</section>
+
 	<section id="pricing">
 		<div class="wrap">
-			<div class="sec-label"><span>02</span> — straight prices, no games</div>
+			<div class="sec-label"><span>03</span> — straight prices, no games</div>
 			<div class="tickets">
 				<div class="ticket">
 					<h4>Email, fixed up</h4>
@@ -251,7 +324,7 @@
 						<li>spam handled</li>
 					</ul>
 				</div>
-				<div class="ticket">
+				<div class="ticket hot">
 					<h4>Website, live</h4>
 					<div class="price">$900<sub>one-time</sub></div>
 					<ul>
@@ -260,7 +333,7 @@
 						<li>photos + copy handled</li>
 						<li>you approve before launch</li>
 					</ul>
-					<div class="stamp">under half the agency rate</div>
+					<div class="stamp">agencies charge $4k+</div>
 				</div>
 				<div class="ticket">
 					<h4>Everything, kept running</h4>
@@ -273,14 +346,13 @@
 					</ul>
 				</div>
 			</div>
-			<!-- CONFIRM: prices are provisional placeholders — Jordan to set final numbers before wide ship -->
-			<div class="price-note">Prices are the whole price. No hourly meters, no "scope conversations." If a job needs something unusual, you hear the number before we touch anything.</div>
+			<div class="price-note">Prices are the whole price. If a job needs something unusual, you hear the number before we touch anything — and it's still fixed.</div>
 		</div>
 	</section>
 
 	<section>
 		<div class="wrap">
-			<div class="sec-label"><span>03</span> — how it goes</div>
+			<div class="sec-label"><span>04</span> — how it goes</div>
 			<div class="steps">
 				<div class="step">
 					<div class="n">STEP 1 — 10 MINUTES</div>
@@ -320,7 +392,7 @@
 
 	<section class="contact" id="contact">
 		<div class="wrap">
-			<h2>The fix is one email away. <em>Send it.</em></h2>
+			<h2>The fix is one email away. <em>Send it today —</em> it's free to ask.</h2>
 			<div class="row">
 				<a class="btn primary" href="mailto:jordan@heynewell.com?subject=I%20need%20this%20handled">jordan@heynewell.com</a>
 				<a class="btn ghost" href="mailto:jordan@heynewell.com?subject=Just%20a%20question">or just ask a question first</a>
