@@ -84,6 +84,35 @@
 
 ---
 
+## AI LANE — /ai.html — "AI, finished." (smart-crowd positioning)
+
+> Intake: client shares their ChatGPT/Claude/Gemini session (export, link, paste).
+> The thread IS the spec. We ship the outcome. Never condescend — they did the smart part.
+> Phase 1: accept ANY export format. Phase 2: converters → .curt (open standard, dotcurt.org)
+> become the intake gate. Phase 3: PM retainer on .curt pipelines.
+
+### 15. Session Rescue — $300 one-time · 🤖+👤 3 days
+- One thread → one shipped outcome (site/doc/automation), fixed price quoted BEFORE work
+- 30-day break-fix included
+- Gate: quote free; if thread = two projects, say so before two invoices
+
+### 16. The Stack — $750 one-time · 🤖+👤 1–2 weeks
+- Up to 4 threads finished, prioritized with client, weekly check-in, 60-day break-fix
+
+### 17. AI Ops retainer — $350/mo · 🤖 ongoing
+- We run the AI side of their business monthly: new threads → shipped work,
+  one-off prompts → documented reusable workflows, kept alive
+- "Your AI department"
+
+### 18. AI Project Management retainer — $500+/mo · 👤+🤖 (PHASE 3 — don't sell yet)
+- Session intake → project → tracked deliverables, weekly shipping cadence
+- Unlocks once .curt intake pipeline is real
+
+**Privacy stance (site copy, non-negotiable):** read to execute, never trained on,
+never resold, deleted on request with written confirmation. .curt nod on page = anti-lock-in.
+
+---
+
 ## PACKAGING
 
 - **The Works** (tier 1+2 bundle): $295/mo + $900 setup — anchor everything against it
