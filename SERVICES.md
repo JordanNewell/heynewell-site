@@ -82,6 +82,14 @@
 - Spec-matching, approved-equal alternates (cost-savings subs), lead-time research,
   vendor sourcing with quotes compared. Deliverable: comparison memo + recommendation
 
+### 14b. Site Verification — $250/visit · 🤝 field + 🤖 fleet (NATIONWIDE)
+- Existing-conditions capture, as-built measurements, progress photo sets — any city
+- **Fulfillment = local gig labor** (TaskRabbit/Thumbtack-class) executing the
+  heynewell capture protocol (20-pt checklist: photo set, measurement pass, condition
+  notes, structured upload) → agent fleet processes → QC'd deliverable
+- **The protocol is the moat** — unskilled hands + good checklist = consistent data
+- ⚠️ BUILD: capture checklist + structured upload form + gig dispatch flow before selling
+
 ---
 
 ## AI LANE — /ai.html — "AI, finished." (smart-crowd positioning)
