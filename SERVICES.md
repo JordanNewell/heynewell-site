@@ -19,7 +19,7 @@
 - Upsell trigger: everything (care plan)
 
 ### 3. Everything, kept running — $95/mo · 🤖 ongoing
-- Hosting, email, backups, security, content changes within 48h, cancel anytime
+- Hosting, email, backups, security, text & image changes on existing pages within 48h, cancel anytime
 - Margin note: infra cost ≈ $0 (own fleet); price is for the SLA
 
 ---
